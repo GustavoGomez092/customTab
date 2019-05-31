@@ -26,7 +26,7 @@ module.exports = function(env) {
 
   if(!debug) {
     commonPlugins.push(new webpack.DefinePlugin({
-      'process.env': {
+      'process.env.PORT': {
         NODE_ENV: JSON.stringify('production')
       }
     }));
