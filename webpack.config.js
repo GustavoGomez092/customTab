@@ -42,7 +42,7 @@ module.exports = function(env) {
     },
     devServer: {
       compress: true,
-      port: process.env.port
+      port: process.env.PORT || 80
     },
     module: {
       loaders: [
