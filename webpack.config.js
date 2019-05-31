@@ -1,5 +1,8 @@
 var webpack = require('webpack');
 var path = require('path');
+var { config } = require('dotenv')
+
+config()
 
 module.exports = function(env) {
   var debug = false;
@@ -36,6 +39,10 @@ module.exports = function(env) {
     output: {
       path: __dirname,
       filename: 'bundle.js'
+    },
+    devServer: {
+      compress: true,
+      port: process.env.port
     },
     module: {
       loaders: [
